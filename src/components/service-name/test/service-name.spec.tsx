@@ -10,7 +10,9 @@ describe('service-name', () => {
     expect(page.root).toEqualHtml(`
       <service-name>
         <mock:shadow-root>
-          <slot></slot>
+          <p class="text">
+            人事評価
+          </p>
         </mock:shadow-root>
       </service-name>
     `);
