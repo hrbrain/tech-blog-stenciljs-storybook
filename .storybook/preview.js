@@ -1,9 +1,7 @@
 const { configure } = require('@storybook/html');
 const loader = require('../loader/index.cjs.js');
 
-function loadWebComponents() {
-  loader.defineCustomElements(window);
-}
+const loadWebComponents = () => loader.defineCustomElements(window);
 
 configure(loadWebComponents, module);
 

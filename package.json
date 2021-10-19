@@ -20,8 +20,10 @@
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "storybook": "run-s build _storybook",
+    "_storybook": "start-storybook -p 6006",
+    "build-storybook": "run-s build build-storybook",
+    "_build-storybook": "build-storybook"
   },
   "dependencies": {
     "@stencil/core": "^2.7.0"
@@ -37,6 +39,7 @@
     "babel-loader": "^8.2.2",
     "jest": "^26.6.3",
     "jest-cli": "^26.6.3",
+    "npm-run-all": "^4.1.5",
     "puppeteer": "^10.0.0"
   },
   "license": "MIT"
